@@ -88,9 +88,6 @@ Our goal is to move beyond theory and dive into practical, real-world data chall
 
 #### Pre-Lunch
 *We move from static plots to interactive visualizations with Plotly.*
-- **Plotly Express vs. Graph Objects**
-  - Quick one-line charts with `px.line()`, `px.bar()`, etc.
-  - Fine-tuned control with `go.Figure()`: adding dropdown menus, sliders, and custom layouts.
 - **Interactivity Features**
   - Tooltips, zooming, panning, and linked brushing across subplots.
   - Embedding callbacks for simple dashboard-like behavior.
