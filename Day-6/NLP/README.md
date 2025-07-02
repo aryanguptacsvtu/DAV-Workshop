@@ -41,8 +41,4 @@ In this hands-on session, you will explore how machines understand and process h
 - How to use LLMs via APIs and open-source tools
 - Basics of **Prompt Engineering** for real-world applications
 
-## 🧪 Prerequisites
-- Basic Python programming
-- Familiarity with Pandas and NumPy
-- Optional: Previous attendance in workshop days 1–5
 
