@@ -180,9 +180,8 @@ On the final day, participants will form groups and choose a project track to wo
   - Project: Analyze customer reviews for sentiment or perform topic modeling on a corpus of news articles.
 - **Track 2: Computer Vision (CV)**
   - Project: Build an image classifier to identify different types of objects or use object detection on a sample video.
-- **Track 3: Advanced Visualization & Dashboarding**
-  - Project: Create a complex, multi-page interactive dashboard telling a compelling story from a rich dataset.
-
+- **Track 3: Generative AI (Gen AI)**
+  - Project: Generate creative content such as text, images, or code using pre-trained models like GPT or Stable Diffusion.
 ---
 
 
