@@ -4,16 +4,7 @@ Welcome to Day 1 of the Data Science Workshop! This session focuses on the found
 
 ---
 
-## Workshop Schedule
-**Date:** July 8, 2025  
-**Time:** 10:00 AM – 5:00 PM (IST)  
-**Topics Covered:**
-- **Pre-Lunch (10:00 AM – 1:20 PM):** Environment setup, Pandas basics, data I/O, performance optimization, and hands-on dataset inspection.
-- **Post-Lunch (2:30 PM – 5:00 PM):** Handling missing data, detecting outliers, type conversion, date handling, method chaining with pipelines, and hands-on dataset cleaning.
-
----
-
-## Pre-Lunch Session (10:00 AM – 1:20 PM)
+## Pre-Lunch Session
 
 ### 1. Environment Setup
 To ensure a smooth workshop experience, set up your Python environment using either **Anaconda** (recommended for simplicity) or **pip** to manage dependencies. Both methods include necessary libraries (Pandas, NumPy, etc.) for data science tasks.
@@ -196,7 +187,7 @@ print(df.describe())
 
 ---
 
-## Post-Lunch Session (2:30 PM – 5:00 PM)
+## Post-Lunch Session
 
 ### 1. Missing Data: Drop vs. Impute
 Missing data is common in real-world datasets and must be handled carefully to avoid biased analyses. There are two primary strategies: dropping missing values or imputing them with substitutes.
