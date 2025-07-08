@@ -39,6 +39,6 @@ In this hands-on session, you will explore how machines understand and process h
 ### 🔹 7. Large Language Models (LLMs) and Prompt Engineering
 - What are LLMs (like llama, ChatGPT etc)
 - How to use LLMs via APIs and open-source tools
-- Basics of **Prompt Engineering{https://www.promptingguide.ai/techniques/graph}** for real-world applications
+- Basics of **Prompt Engineering{https://www.promptingguide.ai/techniques/graph }** for real-world applications
 
 
