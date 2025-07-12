@@ -10,7 +10,8 @@ Our goal is to move beyond theory and dive into practical, real-world data chall
 - 🗣️ **Develop critical thinking, mindfulness, and data story-telling capabilities.**
 
 --- Live Updates ---------------
-Please fill out this pre-workshop survey form: https://forms.gle/p3WZkwD4Wh9nureU7
+
+- July 12: Please fill out this pre-workshop survey form: https://forms.gle/p3WZkwD4Wh9nureU7
 
 
 
