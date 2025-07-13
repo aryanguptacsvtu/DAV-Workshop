@@ -528,5 +528,8 @@ print(cleaned_df)
 - **Open-Source Datasets:** [Kaggle Datasets](https://www.kaggle.com/datasets) – Explore datasets for practice.
 - **Scikit-learn Documentation:** [scikit-learn.org](https://scikit-learn.org/stable/) – Reference for advanced imputation methods like KNN.
 - **Python Datetime Guide:** [docs.python.org/3/library/datetime.html](https://docs.python.org/3/library/datetime.html) – Details on handling dates and times.
+- **RegEx Tutorial:** [https://docs.python.org/3/howto/regex.html](https://docs.python.org/3/howto/regex.html) - Details on how to compose Regular expressions in Python for data analysis 
+
+
 
 Happy learning, and let’s dive into data science!
