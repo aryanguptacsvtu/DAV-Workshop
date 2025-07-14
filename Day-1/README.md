@@ -4,6 +4,11 @@ Welcome to Day 1 of the Data Science Workshop! This session focuses on the found
 
 ---
 
+
+---
+Live from link for today's Hands-On notebook submissions:
+[Google-Form](https://docs.google.com/forms/d/e/1FAIpQLSdWEIULoHcL6gsdSQ0YwukuqNgxHajVsOAmPUgrc4B28ZA23Q/viewform?usp=dialog)
+---
 ## Pre-Lunch Session
 
 ### 1. Environment Setup
