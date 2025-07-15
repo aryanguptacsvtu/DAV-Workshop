@@ -1,108 +1,189 @@
-# 📊 Day 3: Interactive Charts & Time Series Analysis
-
-Welcome to **Day 3** of the Data Analytics & Visualization Workshop!  
-This session focuses on building **interactive data visualizations** using **Plotly**, and performing **time series analysis** including rolling statistics and forecasting using **ARIMA**. 
-We will also cover how to interpret these visualizations and insights effectively. 
-
-## 📂 Contents
-
-- 🔗 [Presentation Slides](https://docs.google.com/presentation/d/1Xdzmk3HUkLBct3FdukY2FQRTuz7MloJ9jZdVLL96J_M/edit?usp=sharing)   
-- 📁 [Dataset for Practice](./datasets/retail_sales.csv)  
-- 🧰 [Installation Guide for Tools](./installation-guide.md)  
-- 📑 [Case Study Template](#case-study-template)  
-- 💻 [Hands-on Tasks](#hands-on-tasks)  
+# 📊 Interactive Charts Advanced Visualizations
+**Theme:** Interactive, Hierarchical, and Multidimensional Charts with Plotly
 
 ---
 
-## 🧰 Installation Guide
+## 🎯 Overview
 
-### 📦 Required Tools
+While Matplotlib and Seaborn are powerful libraries for static and statistical plots, they lack support for dynamic interactivity, complex hierarchies, and multidimensional visuals. Plotly fills this gap by enabling rich, interactive visualizations suitable for dashboards and storytelling.
 
-1. **Python 3.8+**
-2. **Jupyter Notebook or VS Code**
-3. **Power BI Desktop** (for Windows users)
-4. Python Libraries:
-   
-   ```bash
-   pip install matplotlib seaborn plotly pandas statsmodels
-    ```
+This tutorial introduces charts that are difficult or impossible to create using traditional libraries, and showcases how Plotly enables seamless interaction and customization.
 
-## 📊 Dataset Information
+---
 
-**File:** `retail_sales.csv`
-**Description:** A sample dataset showing weekly sales data across multiple regions and product categories.
-* **Columns Include:**
+## 1️⃣ Sunburst Chart – 📌 Hierarchical Data in a Radial Layout
 
-  * `Date` (YYYY-MM-DD)
-  * `Product_Category`
-  * `Region`
-  * `Weekly_Sales`
-  * `Discount`
+**Use Case:** Visualizing nested categories (e.g., Continent → Country)
 
+```python
+import plotly.express as px
 
-## 📑 Case Study Template
+df = px.data.gapminder().query("year == 2007")
+fig = px.sunburst(df, path=['continent', 'country'], values='pop',
+                  title="🌍 Population Breakdown by Continent and Country")
+fig.show()
+````
 
-Please use the following structure to guide your **faculty-evaluated case study analysis**:
+**Expected Output:**
 
-### 📝 Title: \[e.g. Regional Sales Trend Forecasting]
+* A circular interactive chart where segments expand outward based on hierarchy.
+* Hovering reveals population and hierarchy information.
+* Clicking on a segment zooms into that branch.
 
-#### 1. **Objective**
+---
 
-> State the aim of your analysis (e.g., detect sales trends, forecast next 4 weeks, analyze discount effects).
+## 2️⃣ Treemap – 🧱 Space-Filling Proportion Visualization
 
-#### 2. **Dataset Overview**
+**Use Case:** Comparing values across hierarchical categories.
 
-> Brief description of dataset, number of rows/columns, missing values handled, key variables selected.
+```python
+fig = px.treemap(df, path=['continent', 'country'], values='pop',
+                 title="📦 Population Treemap by Country")
+fig.show()
+```
 
-#### 3. **Visualization Insights**
+**Expected Output:**
 
-* Sales trend over time (line plot)
-* Regional comparison (bar chart)
-* Category-wise analysis (pie/donut chart or stacked bar)
-* Discount vs. sales (scatter plot)
+* A color-coded treemap with rectangles sized by population.
+* Hovering shows continent, country, and exact values.
+* Useful for dashboards and comparisons across categories.
 
-#### 4. **Time Series Analysis**
+---
 
-* Convert date column to datetime
-* Resample by month/week
-* Rolling average (20-day, 50-day)
-* Decomposition (trend, seasonality)
-* ARIMA forecast plot
+## 3️⃣ Animated Scatter Plot – 🕐 Trends Over Time
 
-#### 5. **Interpretation**
+**Use Case:** Showing changes over time (GDP, population, etc.)
 
-> Write 4–5 lines interpreting your visualizations and forecasts.
+```python
+fig = px.scatter(px.data.gapminder(), x="gdpPercap", y="lifeExp", animation_frame="year",
+                 size="pop", color="continent", hover_name="country", log_x=True, size_max=60)
+fig.show()
+```
 
-#### 6. **Conclusion**
+**Expected Output:**
 
-> Summarize business impact or potential actions from the insights.
+* Animated timeline showing global development.
+* Dynamic plot updates by year.
+* Hover text and transitions enable storytelling over time.
 
+---
 
-## 💻 Hands-On Tasks
+## 4️⃣ 3D Surface Plot – 🔺 Visualizing Mathematical Functions
 
-### 🔹 Interactive Visualizations using Plotly
+**Use Case:** Plotting surfaces or high-dimensional function outputs.
 
-* Convert a Seaborn chart to interactive Plotly
-* Add hover info (e.g. product name, region)
-* Add dropdown to filter by year/category
+```python
+import plotly.graph_objects as go
+import numpy as np
 
-### 🔹 Time Series Forecasting
+x = np.linspace(-2, 2, 50)
+y = np.linspace(-2, 2, 50)
+x, y = np.meshgrid(x, y)
+z = np.sin(x**2 + y**2)
 
-* Load historical data
-* Apply rolling mean (20-day, 50-day)
-* Plot decomposition (statsmodels)
-* Fit ARIMA and predict next 4 weeks
+fig = go.Figure(data=[go.Surface(z=z, x=x, y=y)])
+fig.update_layout(title='🧠 3D Surface Plot of sin(x² + y²)')
+fig.show()
+```
 
+**Expected Output:**
 
-## 👨‍🏫 Evaluation Checklist
+* Interactive 3D chart with rotation, zoom, and hover values.
+* Useful for mathematical modeling, ML surfaces, or terrain maps.
 
-* ✅ Clean code structure (Jupyter or script)
-* ✅ Use of Plotly and matplotlib
-* ✅ Time Series forecasting with ARIMA
-* ✅ Report (PDF or Markdown) summarizing insights
-* ✅ Final interpretation based on charts and predictions
+---
 
+## 5️⃣ Parallel Coordinates – 🧬 Multi-Dimensional Comparison
 
-📩 **Submit your notebook + report** to the submission form provided by the volunteers.
+**Use Case:** Exploring relationships between multiple numeric features.
 
-Happy Visualizing! 🎨📈
+```python
+fig = px.parallel_coordinates(df,
+                              dimensions=["gdpPercap", "lifeExp", "pop"],
+                              color="lifeExp",
+                              color_continuous_scale=px.colors.diverging.Tealrose)
+fig.update_layout(title='🔗 Parallel Coordinates: GDP, Life Expectancy, Population')
+fig.show()
+```
+
+**Expected Output:**
+
+* Multiple vertical axes with colored lines representing each country.
+* Visualizes patterns across variables.
+* Hover highlights and color gradients enhance interpretability.
+
+---
+
+## 6️⃣ Choropleth Map – 🗺️ Interactive Geographic Visualization
+
+**Use Case:** Plotting world data on maps (e.g., GDP, population)
+
+```python
+fig = px.choropleth(df, locations="iso_alpha", color="lifeExp",
+                    hover_name="country", animation_frame="year",
+                    color_continuous_scale=px.colors.sequential.Plasma,
+                    title="🗺️ Life Expectancy Over Time (Animated)")
+fig.show()
+```
+
+**Expected Output:**
+
+* A dynamic, animated world map.
+* Hover text shows country-specific data.
+* Year-wise transitions provide storytelling through geography.
+
+---
+
+## 7️⃣ Linked Brushing with Facets – 🔍 Interactions Across Charts
+
+**Use Case:** Comparing subsets across dimensions with selection-based filtering.
+
+```python
+fig = px.scatter(df.query("year==2007"), x="gdpPercap", y="lifeExp",
+                 color="continent", hover_name="country", facet_col="continent",
+                 title="📊 GDP vs Life Expectancy per Continent (2007)")
+fig.show()
+```
+
+**Expected Output:**
+
+* Multiple scatter plots side-by-side by continent.
+* Hover interactions persist across subplots.
+* Faceting makes comparison intuitive.
+
+---
+
+## 🧠 Why These Charts Matter
+
+| Feature                     | Matplotlib/Seaborn | Plotly                 |
+| --------------------------- | ------------------ | ---------------------- |
+| Interactivity (Hover, Zoom) | ❌                  | ✅ Built-in             |
+| Hierarchical Charts         | ❌                  | ✅ Sunburst, Treemap    |
+| Animated Visualizations     | ❌                  | ✅ Time slider + frames |
+| 3D Graphs                   | ⚠️ Basic           | ✅ Highly interactive   |
+| Geographic Mapping          | ⚠️ Complex         | ✅ One-liner support    |
+| Linked Brushing             | ❌                  | ✅ Native               |
+| Dashboards & Web App Use    | ❌                  | ✅ Dash integration     |
+
+---
+
+## 📚 References & Docs
+
+* [📘 Plotly Express Documentation](https://plotly.com/python/plotly-express/)
+* [🌍 Plotly Maps Gallery](https://plotly.com/python/maps/)
+* [🔢 Plotly Graph Objects](https://plotly.com/python/graph-objects/)
+* [📦 Sample Datasets in Plotly](https://plotly.com/python-api-reference/plotly.express.html#plotly-express)
+* [📂 Dash Framework (for apps)](https://dash.plotly.com/)
+
+---
+
+## ✅ Key Takeaways
+
+* Use **sunburst** and **treemap** for **hierarchical breakdowns**.
+* Use **animations and sliders** to show **trends over time**.
+* Use **3D surface plots** and **parallel coordinates** for **multidimensional modeling**.
+* Use **choropleths** and **facet grids** for **spatial and segmented analysis**.
+
+These visualizations are **essential for dashboards**, **interactive reports**, and **executive storytelling**.
+
+---
