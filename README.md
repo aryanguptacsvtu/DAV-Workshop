@@ -9,7 +9,11 @@ Our goal is to move beyond theory and dive into practical, real-world data chall
 - 🧠 **Sharpen your problem-solving abilities** through hands-on exercises.
 - 🗣️ **Develop critical thinking, mindfulness, and data story-telling capabilities.**
 
----
+--- Live Updates ---------------
+
+- July 12: Please fill out this pre-workshop survey form: https://forms.gle/p3WZkwD4Wh9nureU7
+- July 12: Loaded practice files (leaves, survey) in Day 1 folder for data cleaning, exploration, model building
+
 
 
 ## 🗓️ Workshop Schedule
