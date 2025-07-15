@@ -1,11 +1,9 @@
----
-LIVE UPDATE: Day 2 Quiz Link : [Quiz Link](https://forms.gle/hDnbTDvdqoHNqGPE8)
----
-
 # 📈 Day 2: Acquisition & Exploratory Visualization  
 **Theme:** Getting data from the web and creating initial visual insights  
 **Duration:** 2 hours (Pre-Lunch)
 
+---
+**LIVE UPDATE:** Day 2 Quiz Link : [Quiz Link](https://forms.gle/hDnbTDvdqoHNqGPE8)
 ---
 
 ## 🔹 Overview
