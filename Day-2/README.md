@@ -3,6 +3,8 @@
 **Duration:** 2 hours (Pre-Lunch)
 
 ---
+**LIVE UPDATE:** Day 2 [Quiz Link](https://docs.google.com/forms/d/e/1FAIpQLSfwQuBstq1f5sWCWaB2CNX71ccN3y7P_CHi_98r2mVZYQrLUQ/viewform?usp=sharing&ouid=100366893311897454689)
+---
 
 ## 🔹 Overview
 

@@ -5,7 +5,6 @@
 
 ## 🎯 Overview
 
-While Matplotlib and Seaborn are powerful libraries for static and statistical plots, they lack support for dynamic interactivity, complex hierarchies, and multidimensional visuals. Plotly fills this gap by enabling rich, interactive visualizations suitable for dashboards and storytelling.
 
 This tutorial introduces charts that are difficult or impossible to create using traditional libraries, and showcases how Plotly enables seamless interaction and customization.
 
