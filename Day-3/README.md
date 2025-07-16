@@ -4,6 +4,9 @@ Welcome to **Day 3** of the Data Analytics & Visualization Workshop!
 This session focuses on building **interactive data visualizations** using **Plotly**, and performing **time series analysis** including rolling statistics and forecasting using **ARIMA**. 
 We will also cover how to interpret these visualizations and insights effectively. 
 
+---
+**Live Updates** -- Submission Link : [LINK](https://forms.gle/K1yfEeBsxqR9vLBi7)
+---
 ## 📂 Contents
 
 - 🔗 [Presentation Slides](https://docs.google.com/presentation/d/1Xdzmk3HUkLBct3FdukY2FQRTuz7MloJ9jZdVLL96J_M/edit?usp=sharing)   
