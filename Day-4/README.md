@@ -10,6 +10,7 @@ Welcome to Day 4! Today, we'll bridge the gap between complex data relationships
 
 ---
 **LIVE UPDATES**: [LINK](https://forms.gle/4BozfCNokqeMzXUb7)
+**LINK TO UPLOAD PREVIOUS DAY ASSIGNMENT** : [LINK](https://forms.gle/K1yfEeBsxqR9vLBi7)
 ---
 
 We'll start by exploring graph data, a powerful way to model and analyze connections—from social networks to financial transactions. We'll use the Python library **NetworkX** for computation and **Gephi** for stunning, interactive visualizations.
