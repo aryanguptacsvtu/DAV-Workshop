@@ -11,6 +11,9 @@ Our goal is to move beyond theory and dive into practical, real-world data chall
 
 --- Live Updates ---------------
 
+
+July 19: [Quiz Link](https://forms.gle/punY4sWyhYVpuD9Q6)
+
 - July 12: Please fill out this pre-workshop survey form: https://forms.gle/p3WZkwD4Wh9nureU7
 - July 12: Loaded practice files (leaves, survey) in Day 1 folder for data cleaning, exploration, model building
 
