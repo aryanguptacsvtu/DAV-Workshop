@@ -69,9 +69,8 @@ Follow the sample_submission.csv for submission of your predicted output
 | 4 | Group students based on attendance percentage (Hint: using Inter Quartile Range) | 5 |
 | 5 | Analyze correlation between different days of the week | 10 |
 | 6 | Identify patterns/correlation of attendance among students | 5 |
-| 7 | Compare attendance between genders | 5 |
-| 8| Check if events (exam/holiday) correlate with spikes in absenteeism | 5 |
-| 9 | Save at least one visual as .jpg/.png & export the clean dataset as .csv | 5 |
+| 7 | Check if events (exam/holiday) correlate with spikes in absenteeism | 5 |
+| 8 | Save at least one visual as .jpg/.png & export the clean dataset as .csv | 5 |
 
 > 💡 You may use libraries such as pandas, matplotlib, seaborn, or plotly for analysis and visualization.
 
